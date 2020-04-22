@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0033)http://ipaulgraham.herokuapp.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="js-focus-visible"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>imock</title>
+
+<meta property="og:title" content="I, Mock Interviews.">
+<meta property="og:description" content="Practice interviews for data science jobs instead!">
+
+<link rel="img_src" href="./imock_files/pg.jpg">
+<meta property="og:image" content="http://philllytalent.com/interview-mock/pg.jpg">
+<link rel="stylesheet" type="text/css" href="./imock_files/style.css">
+
+<script type="text/javascript" src="./imock_files/jquery.js"></script>
+<script type="text/javascript" src="./imock_files/data.js"></script>
+<script type="text/javascript" src="./imock_files/functions.js"></script>
+<script type="text/javascript">
+var timer = 15;
+
+
+// Randomise Questions & Tips
+q.sort(function() {return 0.5 - Math.random()})
+tips.sort(function() {return 0.5 - Math.random()})
+
+
+// End Questions
+q.push('done');
+
+
+$(document).ready(function(){
+	next_q();
+	timer_tick();
+	display_tip();
+});
+
+
+
+$(document).keypress(function(e) {
+
+	switch (e.which)
+	{
+		case 13:
+			// Next Question - Return (13)
+			next_q();
+			break;
+
+		case 32:
+			// Restart Timer - Space (32)
+			timer_restart();
+			break;
+
+		case 110:
+			// Doesn't Do Anything, Move Along
+			$('body').append('<div class="egg"><iframe width="420" height="315" src="http://www.youtube.com/embed/QH2-TGUlwu4?autoplay=1" frameborder="0" allowfullscreen></iframe></div>');
+			break;
+
+	}
+});
+</script>
+
+<style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 400;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 500;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 700;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 900;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+}</style></head>
+<body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+
+<!-- Message to be Displayed when out of questions -->
+<div id="end" class="hide">
+	<h1>You have reached the end of questions</h1>
+	<h2>Hopefully you will be a little more ready for your YC interview, good luck! :)</h2>
+
+	<p>Why not check out <a href="http://stackblaze.com/">StackBlaze</a>, it's cloud computing without the technical babble.</p>
+</div>
+
+
+<!-- Question Display --->
+<div id="question">What do you understand that others don't?</div>
+
+
+<!-- Timer -->
+<div id="timer" class="hide fail">-113 s</div>
+
+
+<!-- Dissapointed Paul Graham -->
+<div class="pg">
+	<img src="./imock_files/pg.jpg" width="400" height="300">
+</div>
+
+
+<!-- Tips Display -->
+<div class="tip">
+	<strong>ProTip:</strong> <span id="tip">Try to have quick and concise answers.</span>
+</div>
+
+
+<!-- Keyboard Control Reference -->
+<div class="controls">
+	<h1>Key Controls</h1>
+
+	<div class="key key-space">space</div>
+	<div class="act">to restart timer</div>
+
+	<div class="key key-return">return</div>
+	<div class="act">to next question</div>
+</div>
+
+
+<!-- Footer -->
+<div class="footer">
+	Built by
+	<a href="http://phillytalent.com/">PhillyTalent Success Team</a>
+</div>
+
+
+
+<span id="pablo-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 66px; height: 25px; background-image: url(&quot;chrome-extension://gfpibnlcombjoeejlongmihndgkpnjjo/data/shared/img/pablo-hover-icon@2x.png&quot;); background-size: 66px 25px; opacity: 0.9; cursor: pointer; top: 554px; left: 898.5px;"></span></body><loom-container id="lo-engage-ext-container"><div></div><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
